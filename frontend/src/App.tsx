@@ -1,24 +1,25 @@
-import React from 'react';
+import React, {useState, useMemo} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+interface CountInterface {
+  count: number
+  count2?: number
+}
+
+const App = () => {
+  const [{count, count2}, setCount] = useState<CountInterface>({count: 10, count2: 20});
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() =>
+          setCount(currentState => ({ count: currentState.count + 1 }))
+        }>
+        Increment
+      </button>
+        <div>count 1: {count}</div>
+        <div>count 2: {count2}</div>
+      <div>{count}</div>
     </div>
   );
 }
