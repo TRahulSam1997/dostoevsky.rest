@@ -4,7 +4,7 @@ import './App.css';
 
 interface CountInterface {
   count: number
-  count2?: number
+  count2: number
 }
 
 const App = () => {
@@ -13,7 +13,8 @@ const App = () => {
   return (
     <div className="App">
       <button onClick={() =>
-          setCount(currentState => ({ count: currentState.count + 1 }))
+          setCount(currentState => ({ ...currentState,
+            count: currentState.count + 1}))
         }>
         Increment
       </button>
