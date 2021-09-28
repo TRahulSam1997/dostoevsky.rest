@@ -1,27 +1,18 @@
-import React, {useState, useMemo} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useMemo } from "react";
+import useFetch from './utils/useFetch'
 
-interface CountInterface {
-  count: number
-  count2: number
-}
 
 const App = () => {
-  const [{count, count2}, setCount] = useState<CountInterface>({count: 10, count2: 20});
+  const data = useFetch(
+    "https://raw.githubusercontent.com/ajzbc/kanye.rest/master/quotes.json"
+  );
 
   return (
-    <div className="App">
-      <button onClick={() =>
-          setCount(currentState => ({ ...currentState,
-            count: currentState.count + 1}))
-        }>
-        Increment
-      </button>
-        <div>count 1: {count}</div>
-        <div>count 2: {count2}</div>
+    <div>
+      <h1>Quotes</h1>
+      {data}
     </div>
-  );
+  )
 }
 
 export default App;
