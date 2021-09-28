@@ -16,11 +16,20 @@ export class Quotes {
         this.app = app;
 
         try {
-            this.app.get("/api", (req: Request, res: Response): void => {
+            this.app.get("/api/rand", (req: Request, res: Response): void => {
                 let quote:string = quotes[Math.floor(Math.random() * quotes.length)];
                 let resQuote:JSON = JSON.parse(`{"quote": "${quote}"}`);
                 req.headers[this.headers]
                 res.send(resQuote);
+            })
+        } catch (e) {
+            console.log(e);
+        }
+
+        try {
+            this.app.get("/api", (req: Request, res: Response): void => {
+                req.headers[this.headers]
+                res.send(quotes);
             })
         } catch (e) {
             console.log(e);
