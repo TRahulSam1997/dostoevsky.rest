@@ -4,13 +4,13 @@ import useFetch from './utils/useFetch'
 
 const App = () => {
   const data = useFetch(
-    "https://raw.githubusercontent.com/ajzbc/kanye.rest/master/quotes.json"
+    "/api/rand"
   );
 
   return (
     <div>
       <h1>Quotes</h1>
-      {data}
+      {data.data}
     </div>
   )
 }
