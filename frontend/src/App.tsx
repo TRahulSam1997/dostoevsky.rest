@@ -10,7 +10,8 @@ const App = () => {
   return (
     <div>
       <h1>Quotes</h1>
-      {data.data}
+      <button>Get Quote</button>
+      <div>{data.data}</div>
     </div>
   )
 }
