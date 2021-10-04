@@ -3,17 +3,18 @@ import useFetch from './utils/useFetch'
 import {Payload} from './utils/useFetch';
 
 const App = () => {
-  const [quote, setquote] = useState<Payload>({data: null, loading: true})
-  const handleClick = () => setquote(data)
+  // const [quote, setquote] = useState<Payload>({data: null, loading: true})
 
-  const data = useFetch(
-    "/api/rand"
-  );
+  const { quote, refetch, loading } = useFetch('/api/rand');
+
+  useEffect(() => {
+    refetch();
+  }, []);
 
   return (
     <div>
       <h1>Quotes</h1>
-      <button onClick={handleClick}>Get Quote</button>
+      <button onClick={refetch}>Get Quote</button>
       <div>{quote.data}</div>
     </div>
   )
