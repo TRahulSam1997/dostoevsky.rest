@@ -1,5 +1,7 @@
 import {Express, Request, Response} from "express";
+import express from "express";
 import quotes from "./lib/quotes.json";
+import * as path from "path";
 
 export class Quotes {
 
@@ -14,6 +16,8 @@ export class Quotes {
 
     constructor(app: Express) {
         this.app = app;
+
+        this.app.use(express.static(path.resolve("./") + "/build/frontend"));
 
         try {
             this.app.get("/api/rand", (req: Request, res: Response): void => {
@@ -34,6 +38,10 @@ export class Quotes {
         } catch (e) {
             console.log(e);
         }
+
+        this.app.get("*", (req: Request, res: Response): void => {
+            res.sendFile(path.resolve("./") + "/build/frontend/index.html");
+        });
     }
 
     public start(port: number): void {
