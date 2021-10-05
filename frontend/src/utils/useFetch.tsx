@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 export interface Payload {
   data: null | string,
@@ -6,7 +6,6 @@ export interface Payload {
 }
 
 const useFetch = (url: string) => {
-  // const [state, setState] = useState<Payload>({data: null, loading: true})
   const [loading, setLoading] = useState(false);
   const [quote, setQuote] = useState<Payload>({data: null, loading: true});
 
@@ -16,7 +15,6 @@ const useFetch = (url: string) => {
       .then((x) => x.text())
       .then((y) => {
         setQuote({ data: y, loading: false });
-        // setQuote(String(Math.random()));
         setLoading(false);
       });
   }, [url]);
