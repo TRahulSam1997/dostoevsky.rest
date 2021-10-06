@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "nodemon --watch './**/*.ts' --exec 'ts-node' index.ts",
-    "build": "./buildScript.sh"
+    "build": "CI='' ./buildScript.sh"
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
