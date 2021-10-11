@@ -1,5 +1,6 @@
 mkdir build
 cd frontend;
+npm install;
 npm run build;
 cd ..;
 npm install @types/node --save-dev;
