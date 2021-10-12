@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div>
       <h1>Quotes</h1>
-      <button onClick={refetch}>Get Quote</button>
+      <button onClick={refetch}>Dostoevsky.rest</button>
       <div>{!quote && loading? "loading..." : quote.data}</div>
     </div>
   )
