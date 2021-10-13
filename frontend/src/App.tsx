@@ -10,8 +10,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>Quotes</h1>
-      <button onClick={refetch}>Dostoevsky.rest</button>
+      <h1>Dostoevsky.rest</h1>
+      <button onClick={refetch}>Quote</button>
       <div>{!quote && loading? "loading..." : quote.data}</div>
     </div>
   )

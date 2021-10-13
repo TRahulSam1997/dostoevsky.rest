@@ -1,6 +1,7 @@
 FROM node:10-alpine AS builder
 WORKDIR /usr/src/app/
 COPY . .
+RUN mkdir build && cd frontend && npm install && npm run build && cd ..
 RUN npm install && npm run build
 
 # FROM node:10 AS frontend-build
@@ -8,7 +9,6 @@ RUN npm install && npm run build
 # COPY frontend/ ./frontend/
 # RUN mkdir build
 # RUN cd frontend && npm install && npm run build
-RUN cd frontend && npm install && npm run build
 
 FROM node:10-alpine
 WORKDIR /usr/src/app/

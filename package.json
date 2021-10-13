@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "nodemon --watch './**/*.ts' --exec 'ts-node' index.ts",
-    "build": "CI='' ./buildScript.sh"
+    "build": "CI='' npm install @types/node --save-dev && npm install typescript && npm install express && npm install path && npx tsc"
   },
   "devDependencies": {
     "@types/node": "^16.10.3",
