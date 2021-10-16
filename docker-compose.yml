@@ -39,14 +39,15 @@ services:
     command: certonly --webroot --webroot-path=/var/www/html --email rahulsamaranayake@yahoo.com --agree-tos --no-eff-email --staging -d dostoevsky.rest.com  -d www.dostoevsky.rest
 
 volumes:
-  certbot-etc:
-  certbot-var:
-  web-root:
-    driver: local
-    driver_opts:
-      type: none
-      device: /root/dostoevsky.rest/views/
-      o: bind
+  dostoevsky.rest:
+    certbot-etc:
+    certbot-var:
+    web-root:
+      driver: local
+      driver_opts:
+        type: none
+        device: /root/dostoevsky.rest/views/
+        o: bind
 
 networks:
   app-network:
