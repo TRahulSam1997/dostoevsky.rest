@@ -45,7 +45,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /root/dostoevskyrest/views/
+      device: /root/dostoevsky.rest/views/
       o: bind
 
 networks:
