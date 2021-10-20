@@ -2,7 +2,7 @@
 
 Hobby project I'm working on out of my profound love for [Fyodor Dostoevsky](https://en.wikipedia.org/wiki/Fyodor_Dostoevsky), TypeScript and React Hooks.
 
-Inspired by https://kanye.rest/
+https://www.dostoevsky.rest/
 
 ## Build Steps
 1. Make sure you have Docker Desktop.
@@ -11,3 +11,5 @@ Inspired by https://kanye.rest/
 4. Go to http://localhost:8080/
 
 ****Ongoing project***
+
+Inspired by https://kanye.rest/
