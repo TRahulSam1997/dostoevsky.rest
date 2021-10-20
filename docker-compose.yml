@@ -17,11 +17,13 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - /${PWD}/views/:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
+      - /${PWD}/dhparam:/etc/ssl/certs
     depends_on:
       - nodejs
     networks:
