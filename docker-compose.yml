@@ -23,7 +23,7 @@ services:
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - /${PWD}/dhparam:/etc/ssl/certs
+      - /${PWD}/dhparam/:/etc/ssl/certs
     depends_on:
       - nodejs
     networks:
