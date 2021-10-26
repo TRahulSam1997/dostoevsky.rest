@@ -10,6 +10,4 @@ Get a quote on https://www.dostoevsky.rest/
 3. Run `docker run -d -it -p 8080:8080 --name dostoevsky.rest dostoevsky.rest`.
 4. Go to http://localhost:8080/
 
-****Ongoing project***
-
 Inspired by https://kanye.rest/
