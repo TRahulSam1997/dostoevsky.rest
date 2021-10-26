@@ -1,6 +1,6 @@
 # dostoevsky.rest
 
-A hobby project I'm working on out of my profound love for [Fyodor Dostoevsky](https://en.wikipedia.org/wiki/Fyodor_Dostoevsky), TypeScript and React Hooks.
+A hobby project I'm working on out of my profound love for [Fyodor Dostoevsky](https://en.wikipedia.org/wiki/Fyodor_Dostoevsky), TypeScript and React Hooks. Dockerised and deployed on Digital Ocean.
 
 Get a quote on https://www.dostoevsky.rest/
 
